@@ -1,0 +1,25 @@
+classdef CellPath < Path
+    %UNTITLED2 Summary of this class goes here
+    %   Detailed explanation goes here
+    
+    properties
+        cellArray
+    end
+    
+    methods
+        function obj = CellPath()
+            cell1 = PositionCell(1,1);
+            cell2 = PositionCell(1,2);
+            cell3 = PositionCell(2,2);
+            obj.cellArray = [cell1, cell2, cell3];
+        end
+        function start = getStart(obj)
+            start = obj.cellArray(0);
+        end
+        function target = getTarget(obj)
+        end
+        length = getLength(obj)
+    end
+    
+end
+
